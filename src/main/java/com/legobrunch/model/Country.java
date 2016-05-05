@@ -36,20 +36,15 @@ public class Country extends BaseEntity
    @Size(min = 3, max = 3)
    private String iso3;
 
-   @Column(length = 3)
-   @NotNull
-   @Size(min = 3, max = 3)
-   private String numcode;
 
    public Country(){}
 
-   public Country(String isoCode, String name, String printableName, String iso3, String numcode)
+   public Country(String isoCode, String name, String printableName, String iso3)
    {
       this.isoCode = isoCode;
       this.name = name;
       this.printableName = printableName;
       this.iso3 = iso3;
-      this.numcode = numcode;
    }
 
    public String getIsoCode() {
@@ -82,13 +77,5 @@ public class Country extends BaseEntity
 
    public void setIso3(String iso3) {
       this.iso3 = iso3;
-   }
-
-   public String getNumcode() {
-      return numcode;
-   }
-
-   public void setNumcode(String numcode) {
-      this.numcode = numcode;
    }
 }
