@@ -4,7 +4,7 @@ import com.legobrunch.model.Category;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceUnit;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
@@ -13,10 +13,10 @@ import java.util.List;
 @Stateless
 public class CategoriesService {
 
-    @PersistenceUnit
+    @PersistenceContext
     EntityManager em;
 
     public List<Category> findAll(){
-        return em.createNamedQuery(Category.FIND_ALL).getResultList();
+       return em.createNamedQuery(Category.FIND_ALL).getResultList();
     }
 }
