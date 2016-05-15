@@ -78,4 +78,14 @@ public class Country extends BaseEntity
    public void setIso3(String iso3) {
       this.iso3 = iso3;
    }
+
+   @Override
+   public String toString() {
+      return "Country{" +
+              "isoCode='" + isoCode + '\'' +
+              ", name='" + name + '\'' +
+              ", printableName='" + printableName + '\'' +
+              ", iso3='" + iso3 + '\'' +
+              '}';
+   }
 }

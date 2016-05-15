@@ -60,4 +60,13 @@ public class CreditCard implements Serializable
    public void setCreditCardExpDate(String creditCardExpDate) {
       this.creditCardExpDate = creditCardExpDate;
    }
+
+   @Override
+   public String toString() {
+      return "CreditCard{" +
+              "creditCardNumber='" + creditCardNumber + '\'' +
+              ", creditCardType=" + creditCardType +
+              ", creditCardExpDate='" + creditCardExpDate + '\'' +
+              '}';
+   }
 }

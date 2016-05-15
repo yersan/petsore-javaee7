@@ -153,4 +153,19 @@ public class Customer extends BaseEntity
    public void setHomeAddress(Address homeAddress) {
       this.homeAddress = homeAddress;
    }
+
+   @Override
+   public String toString() {
+      return "Customer{" +
+              "firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", telephone='" + telephone + '\'' +
+              ", email='" + email + '\'' +
+              ", login='" + login + '\'' +
+              ", password='" + password + '\'' +
+              ", uuid='" + uuid + '\'' +
+              ", dateOfBirth=" + dateOfBirth +
+              ", homeAddress=" + homeAddress +
+              '}';
+   }
 }

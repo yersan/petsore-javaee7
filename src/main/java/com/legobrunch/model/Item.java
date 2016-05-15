@@ -96,4 +96,15 @@ public class Item extends BaseEntity
    public void setProduct(Product product) {
       this.product = product;
    }
+
+   @Override
+   public String toString() {
+      return "Item{" +
+              "name='" + name + '\'' +
+              ", description='" + description + '\'' +
+              ", imagePath='" + imagePath + '\'' +
+              ", unitCost=" + unitCost +
+              ", product=" + product +
+              '}';
+   }
 }

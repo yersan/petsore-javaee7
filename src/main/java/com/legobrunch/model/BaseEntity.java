@@ -35,4 +35,12 @@ public class BaseEntity implements Serializable{
     public void setVersion(int version) {
         this.version = version;
     }
+
+    @Override
+    public String toString() {
+        return "BaseEntity{" +
+                "id=" + id +
+                ", version=" + version +
+                '}';
+    }
 }

@@ -24,4 +24,12 @@ public class OrderLine extends BaseEntity
       this.quantity = quantity;
       this.item = item;
    }
+
+   @Override
+   public String toString() {
+      return "OrderLine{" +
+              "quantity=" + quantity +
+              ", item=" + item +
+              '}';
+   }
 }

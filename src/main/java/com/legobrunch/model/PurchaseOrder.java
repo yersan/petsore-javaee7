@@ -166,4 +166,22 @@ public class PurchaseOrder extends BaseEntity
    public void setCreditCard(CreditCard creditCard) {
       this.creditCard = creditCard;
    }
+
+   @Override
+   public String toString() {
+      return "PurchaseOrder{" +
+              "orderDate=" + orderDate +
+              ", totalWithoutVat=" + totalWithoutVat +
+              ", vatRate=" + vatRate +
+              ", vat=" + vat +
+              ", totalWithVat=" + totalWithVat +
+              ", discountRate=" + discountRate +
+              ", discount=" + discount +
+              ", total=" + total +
+              ", customer=" + customer +
+              ", orderLines=" + orderLines +
+              ", deliveryAddress=" + deliveryAddress +
+              ", creditCard=" + creditCard +
+              '}';
+   }
 }

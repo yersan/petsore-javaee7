@@ -13,7 +13,7 @@ $(function () {
     var viewmodel = (function () {
         var self = this;
 
-        self.category = new Category();
+        self.categories = ko.observableArray([]);
 
         $.getJSON("rest/categories", function (allData) {
             var mappedTasks = $.map(allData, function (item) {
@@ -22,11 +22,13 @@ $(function () {
                     .name(item.name)
                     .description(item.description)
             });
+
+            self.categories(mappedTasks);
         });
 
 
         return {
-            category: self.category,
+            categories: self.categories,
         }
     })();
 
